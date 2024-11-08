@@ -1,0 +1,22 @@
+<div class="header">
+  <h1>Chord Library
+  </h1>
+</div>
+
+
+<%= form_with url: chords_path, method: :get, local: true do |form| %>
+  <div>
+    <%= form.label :search, "Search Chords:" %>
+      <%= form.text_field :search, value: params[:search] %>
+        <%= form.submit "Search" %>
+  </div>
+  <% end %>
+
+    <ul>
+      <% @chords.each do |chord| %>
+        <li>
+          <%= link_to chord.name, chord_path(chord) %>
+            <!-- <%= chord.chord_type %> -->
+        </li>
+        <% end %>
+    </ul>

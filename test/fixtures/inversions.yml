@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  finger_positions: MyString
+  intervals: MyString
+  chord: one
+
+two:
+  name: MyString
+  finger_positions: MyString
+  intervals: MyString
+  chord: two

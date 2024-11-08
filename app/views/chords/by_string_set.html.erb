@@ -1,0 +1,13 @@
+<h1>Triad Practice: <%= @string_set %>
+</h1>
+<ul>
+  <% @chords.each do |chord| %>
+    <li>
+      <strong>
+        <%= chord.name %>
+      </strong> - <%= link_to 'View Details' , chord_path(chord) %>
+    </li>
+    <% end %>
+</ul>
+
+<%= link_to 'Back to Choose String Set' , root_path, class: 'button' %>

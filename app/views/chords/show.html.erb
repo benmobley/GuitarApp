@@ -1,0 +1,21 @@
+<h1>
+  <%= @chord.name %> (<%= @chord.chord_type %>)
+</h1>
+
+<p>String Set: <%= @chord.string_set %>
+</p>
+
+<h2>Inversions</h2>
+<ul class="inversions-list">
+  <% @inversions.sort_by do |inversion| %>
+    <h3>
+      <%= inversion.name %>
+    </h3>
+    <p>Finger Positions: <%= inversion.finger_positions %>
+    </p>
+    <p>Intervals: <%= inversion.intervals %>
+    </p>
+    <% end %>
+</ul>
+
+<%= link_to "Back to Chords" , chords_path %>

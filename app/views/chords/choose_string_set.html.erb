@@ -1,0 +1,6 @@
+<h1>Choose Your String Set</h1>
+<div class="string-set-buttons">
+  <% @string_sets.each do |string_set| %>
+    <%= link_to string_set, string_set_path(string_set), class: 'button' %>
+      <% end %>
+</div>
