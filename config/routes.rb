@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  root "chords#choose_string_set"
+  root "chords#home"
 
   get "/chords" => "chords#index", as: :chords
   get "/chords/:id" => "chords#show", as: :chord
-  get "/string_sets/:string_set", to: "chords#by_string_set", as: :string_set
+  get "/triads/:string_set", to: "chords#by_string_set", as: :string_set
+  get "/triads" => "chords#triads", as: :triads
+  get "/open", to: "chords#open", as: :open_chords
 end

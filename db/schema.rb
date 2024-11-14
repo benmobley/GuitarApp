@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_11_07_034811) do
+ActiveRecord::Schema[7.2].define(version: 2024_11_14_064127) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,7 +24,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_07_034811) do
 
   create_table "inversions", force: :cascade do |t|
     t.string "name"
-    t.string "finger_positions"
+    t.integer "finger_positions", default: [], array: true
     t.string "intervals"
     t.bigint "chord_id", null: false
     t.datetime "created_at", null: false
