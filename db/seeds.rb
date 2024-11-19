@@ -152,18 +152,36 @@
 
 # db/seeds.rb
 
+# db/seeds.rb
+
 require "csv"
 
-# Hash to keep track of created chords, to avoid duplicating them
+# Path to your corrected CSV file
+csv_file_path = Rails.root.join("db", "chords.csv")
+
+# Hash to keep track of created chords to avoid duplication
 created_chords = {}
 
-CSV.foreach(Rails.root.join("db/chords.csv"), headers: true) do |row|
+# Read and parse the CSV file
+CSV.foreach(csv_file_path, headers: true, col_sep: ",", quote_char: '"') do |row|
   chord_name = row["Chord Name"]
   chord_type = row["Chord Type"]
   string_set = row["String Set"]
   inversion_name = row["Inversion Name"]
-  finger_positions = row["Finger Positions"]
+  finger_positions_raw = row["Finger Positions"]
   intervals = row["Intervals"]
+
+  # Sanitize and parse the finger positions
+  finger_positions = finger_positions_raw.gsub(/[\[\]\s]/, "").split(",").map do |pos|
+    # Convert 'X' to -1 to represent muted strings numerically, or keep 'X' if your application expects it
+    pos.upcase == "X" ? -1 : pos.to_i
+  end
+
+  # Ensure the finger_positions array has 6 elements
+  if finger_positions.size != 6
+    puts "Warning: Chord #{chord_name} has #{finger_positions.size} finger positions."
+    next # Skip this chord or handle the error as appropriate
+  end
 
   # Find or create the chord
   chord = created_chords[chord_name] || Chord.find_or_create_by!(
@@ -175,10 +193,10 @@ CSV.foreach(Rails.root.join("db/chords.csv"), headers: true) do |row|
   # Store the chord in the hash to avoid duplicate creation
   created_chords[chord_name] ||= chord
 
-  # Create each inversion for the chord
+  # Create the inversion for the chord
   chord.inversions.create!(
     name: inversion_name,
-    finger_positions: finger_positions,
+    finger_positions: finger_positions, # Assuming finger_positions is stored as an array
     intervals: intervals,
   )
 end

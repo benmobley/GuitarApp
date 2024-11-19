@@ -15,8 +15,8 @@
     <ul>
       <% @chords.each do |chord| %>
         <li>
-          <%= link_to chord.name, chord_path(chord) %>
-            <!-- <%= chord.chord_type %> -->
+          <%= link_to chord.name, chord_path(chord) %> -
+            <%= chord.chord_type %>
         </li>
         <% end %>
     </ul>

@@ -32,11 +32,14 @@ class ChordsController < ApplicationController
   def by_string_set
     @string_set = params[:string_set]
     @chords = Chord.where(string_set: @string_set, chord_type: "Triad")
-
-    render :index
   end
 
   def open
-    @chords = Chord.where(string_set: "EADGBe", chord_type: "Open")
+    @open_chords = {}
+    Chord.where(string_set: "EADGBe", chord_type: "Open").each do |chord|
+      if chord.inversions.any?
+        @open_chords[chord.name] = chord.inversions[0].finger_positions
+      end
+    end
   end
 end

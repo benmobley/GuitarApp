@@ -1,18 +1,4 @@
-<h1>
-  Open Chord Practice:
-</h1>
-<div class="fretboard-body">
-  <div class="fretboard-container">
-    <canvas id="fretboard" width="800" height="200"></canvas>
-  </div>
-  <div class="chord-buttons">
-    <% @open_chords.each do |chord| %>
-      <button onclick="displayChord('<%= j chord[0] %>')"><%= chord[0] %></button>
-      <% end %>
-  </div>
-</div>
-<script>
-  const canvas = document.getElementById("fretboard");
+const canvas = document.getElementById("fretboard");
 const ctx = canvas.getContext("2d");
 
 const fretCount = 12; // Number of frets
@@ -23,7 +9,9 @@ const fretboardHeight = canvas.height;
 const fretWidth = fretboardWidth / fretCount;
 const stringSpacing = fretboardHeight / (stringCount + 1);
 
-const chords = <%= @open_chords.to_json.html_safe %>
+const chords = {
+  A: [null, 0, 2, 2, 2, 0],
+};
 
 // Function to draw the fretboard
 function drawFretboard() {
@@ -80,7 +68,7 @@ function displayChord(chordName) {
   }
   // Draw circles for each fret position
   chord.forEach((fret, string) => {
-    if (fret !== null) {
+    if (fret !== "X") {
       // Check if the string is played
       const x = fret * fretWidth - fretWidth / 2;
       const y = (stringCount - string) * stringSpacing;
@@ -107,5 +95,3 @@ function displayChord(chordName) {
 
 // Initial draw
 drawFretboard();
-
-</script>

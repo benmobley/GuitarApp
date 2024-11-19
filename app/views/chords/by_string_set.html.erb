@@ -7,7 +7,10 @@
         <%= chord.name %>
       </strong> - <%= link_to 'View Details' , chord_path(chord) %>
     </li>
+    <li>
+      <%= chord.inversions[0].finger_positions %>
+    </li>
     <% end %>
 </ul>
 
-<%= link_to 'Back to Choose String Set' , root_path, class: 'button' %>
+<%= link_to 'Back to Choose String Set' , triads_path, class: 'button' %>
