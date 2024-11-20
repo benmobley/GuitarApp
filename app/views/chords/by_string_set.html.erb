@@ -1,16 +1,122 @@
-<h1>Triad Practice: <%= @string_set %>
+<h1>
+  Triad Practice: <%= @string_set %>
 </h1>
-<ul>
-  <% @chords.each do |chord| %>
-    <li>
-      <strong>
-        <%= chord.name %>
-      </strong> - <%= link_to 'View Details' , chord_path(chord) %>
-    </li>
-    <li>
-      <%= chord.inversions[0].finger_positions %>
-    </li>
-    <% end %>
-</ul>
+<div class="fretboard-body">
+  <div class="fretboard-container">
+    <canvas id="fretboard" width="800" height="200"></canvas>
+  </div>
+  
+  <div class="chord-buttons">
+    <% @chords.each do |chord| %>
+      <button onclick="displayChord('<%= j chord.name %>')"><%= chord.name %></button>
+      <% end %>
+  </div>
+</div>
+<script>
+  const canvas = document.getElementById("fretboard");
+  const ctx = canvas.getContext("2d");
+
+  const fretCount = 12; // Number of frets
+  const stringCount = 6; // Number of strings
+
+  const fretboardWidth = canvas.width;
+  const fretboardHeight = canvas.height;
+  const fretWidth = fretboardWidth / fretCount;
+  const stringSpacing = fretboardHeight / (stringCount + 1);
+
+  const chords = <%= @chords.to_json(include: { inversions: { only: ['finger_positions', 'name'] } }).html_safe %>;
+
+  let currentChordIndex = {};
+
+  // Function to draw the fretboard
+  function drawFretboard() {
+    ctx.clearRect(0, 0, fretboardWidth, fretboardHeight);
+
+    // Draw frets
+    for (let i = 0; i <= fretCount; i++) {
+      const x = i * fretWidth;
+      ctx.beginPath();
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x, fretboardHeight);
+      ctx.strokeStyle = "#333";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    }
+
+    // Draw strings
+    for (let j = 1; j <= stringCount; j++) {
+      const y = j * stringSpacing;
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(fretboardWidth, y);
+      ctx.strokeStyle = "#666";
+      ctx.lineWidth = j * 0.5; // Strings get thicker
+      ctx.stroke();
+    }
+
+    // Draw fret markers
+    const markers = [3, 5, 7, 9, 12];
+    markers.forEach((fret) => {
+      const x = (fret - 0.5) * fretWidth;
+      const radius = 5;
+      if (fret === 12) {
+        // 12th fret has double markers
+        ctx.beginPath();
+        ctx.arc(x, stringSpacing * 2, radius, 0, Math.PI * 2);
+        ctx.arc(x, stringSpacing * 5, radius, 0, Math.PI * 2);
+        ctx.fillStyle = "#333";
+        ctx.fill();
+      } else {
+        ctx.beginPath();
+        ctx.arc(x, fretboardHeight / 2, radius, 0, Math.PI * 2);
+        ctx.fillStyle = "#333";
+        ctx.fill();
+      }
+    });
+  }
+
+  // Function to display a chord and its inversion
+  function displayChord(chordName) {
+    const chord = chords.find((chord) => chord.name === chordName);
+    if (!chord) return;
+
+    // Get the current inversion index for this chord, defaulting to 0 (root position)
+    if (!(chordName in currentChordIndex)) {
+      currentChordIndex[chordName] = 0;
+    }
+
+    const currentInversionIndex = currentChordIndex[chordName];
+    const inversion = chord.inversions[currentInversionIndex];
+
+    if (!inversion) return;
+
+    // Draw the fretboard
+    drawFretboard();
+
+    // Draw circles for finger positions
+    inversion.finger_positions.forEach((fret, string) => {
+      if (fret !== null) {
+        const x = fret * fretWidth - fretWidth / 2;
+        const y = (stringCount - string) * stringSpacing;
+
+        ctx.beginPath();
+        ctx.arc(x, y, 10, 0, Math.PI * 2); // Radius of 10 for the circle
+        ctx.fillStyle = "blue";
+        ctx.fill();
+      }
+    });
+
+    // Update the label above the fretboard
+    const inversionLabel = document.getElementById("inversion-label");
+    inversionLabel.textContent = inversion.name;
+
+    // Cycle to the next inversion
+    currentChordIndex[chordName] = (currentChordIndex[chordName] + 1) % chord.inversions.length;
+  }
+
+  // Initial draw
+  drawFretboard();
+
+</script>
 
 <%= link_to 'Back to Choose String Set' , triads_path, class: 'button' %>
