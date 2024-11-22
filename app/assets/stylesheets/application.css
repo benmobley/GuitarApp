@@ -106,7 +106,7 @@ canvas {
   max-width: 800px;
 }
 
-.chord-buttons button {
+.chord-button, .inversion-buttons button {
   padding: 10px 20px;
   background-color: #0066cc;
   color: white;
@@ -115,4 +115,12 @@ canvas {
   font-size: 1em;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+.chord-button.active {
+  background-color: green;
+}
+
+.inversion-button.active {
+  background-color: green;
 }

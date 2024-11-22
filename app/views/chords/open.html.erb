@@ -8,7 +8,7 @@
   
   <div class="chord-buttons">
     <% @open_chords.each do |chord| %>
-      <button onclick="displayChord('<%= j chord[0] %>')"><%= chord[0] %></button>
+      <button class="chord-button" onclick="displayChord('<%= j chord[0] %>'); selectButton(this)"><%= chord[0] %></button>
       <% end %>
   </div>
 </div>
@@ -104,6 +104,13 @@ function displayChord(chordName) {
       ctx.fill();
     }
   });
+}
+
+function selectButton(button) {
+  const buttons = document.querySelectorAll('.chord-button');
+  buttons.forEach((btn) => btn.classList.remove('active'));
+
+  button.classList.add('active');
 }
 
 // Initial draw
