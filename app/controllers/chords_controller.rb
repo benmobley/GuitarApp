@@ -5,7 +5,6 @@ class ChordsController < ApplicationController
     else
       @chords = Chord.all.order(:name)
     end
-    render :index
   end
 
   def show
@@ -36,7 +35,7 @@ class ChordsController < ApplicationController
 
   def open
     @open_chords = {}
-    Chord.where(string_set: "EADGBe", chord_type: "Open").each do |chord|
+    Chord.where(chord_type: "Open").each do |chord|
       if chord.inversions.any?
         @open_chords[chord.name] = chord.inversions[0].finger_positions
       end

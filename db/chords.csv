@@ -23,39 +23,255 @@ Asus4,Open,EADGBe,Open Position,"[X,0,2,2,3,0]",X Root Fifth Root Fourth Fifth
 Esus4,Open,EADGBe,Open Position,"[0,2,2,2,0,0]",Root Fifth Root Fourth Fifth Root
 B7,Open,EADGBe,Open Position,"[X,2,1,2,0,2]",X Root MajorThird FlatSeventh Fifth Root
 Em7,Open,EADGBe,Open Position,"[0,2,0,0,0,0]",Root Fifth FlatSeventh MinorThird Fifth Root
-A Major,Triad,ADG,Root Position,"[X,12,11,9,X,X]",1 3 5
-A Major,Triad,ADG,First Inversion,"[X,4,2,2,X,X]",3 5 1
-A Major,Triad,ADG,Second Inversion,"[X,7,7,6,X,X]",5 1 3
-A Minor,Triad,ADG,Root Position,"[X,12,10,9,X,X]",1 b3 5
-A Minor,Triad,ADG,First Inversion,"[X,3,2,2,X,X]",b3 5 1
-A Minor,Triad,ADG,Second Inversion,"[X,7,7,5,X,X]",5 1 b3
-A Diminished,Triad,ADG,Root Position,"[X,12,10,8,X,X]",1 b3 b5
-A Diminished,Triad,ADG,First Inversion,"[X,3,1,2,X,X]",b3 b5 1
-A Diminished,Triad,ADG,Second Inversion,"[X,6,7,5,X,X]",b5 1 b3
-B Major,Triad,ADG,Root Position,"[X,2,1,X,X,X]",1 3 5
-B Major,Triad,ADG,First Inversion,"[X,6,4,4,X,X]",3 5 1
-B Major,Triad,ADG,Second Inversion,"[X,9,9,8,X,X]",5 1 3
-B Minor,Triad,ADG,Root Position,"[X,2,0,X,X,X]",1 b3 5
-B Minor,Triad,ADG,First Inversion,"[X,5,4,4,X,X]",b3 5 1
-B Minor,Triad,ADG,Second Inversion,"[X,9,9,7,X,X]",5 1 b3
-B Diminished,Triad,ADG,Root Position,"[X,2,0,X,X,X]",1 b3 b5
-B Diminished,Triad,ADG,First Inversion,"[X,5,3,4,X,X]",b3 b5 1
-B Diminished,Triad,ADG,Second Inversion,"[X,8,9,7,X,X]",b5 1 b3
-C Major,Triad,ADG,Root Position,"[X,3,2,0,X,X]",1 3 5
-C Major,Triad,ADG,First Inversion,"[X,7,5,5,X,X]",3 5 1
-C Major,Triad,ADG,Second Inversion,"[X,10,10,9,X,X]",5 1 3
-C Minor,Triad,ADG,Root Position,"[X,3,1,0,X,X]",1 b3 5
-C Minor,Triad,ADG,First Inversion,"[X,6,5,5,X,X]",b3 5 1
-C Minor,Triad,ADG,Second Inversion,"[X,10,10,8,X,X]",5 1 b3
-C Diminished,Triad,ADG,Root Position,"[X,3,1,X,X,X]",1 b3 b5
-C Diminished,Triad,ADG,First Inversion,"[X,6,4,5,X,X]",b3 b5 1
-C Diminished,Triad,ADG,Second Inversion,"[X,9,10,8,X,X]",b5 1 b3
-D Major,Triad,ADG,Root Position,"[X,5,4,2,X,X]",1 3 5
-D Major,Triad,ADG,First Inversion,"[X,9,7,7,X,X]",3 5 1
-D Major,Triad,ADG,Second Inversion,"[X,12,12,11,X,X]",5 1 3
-D Minor,Triad,ADG,Root Position,"[X,5,3,2,X,X]",1 b3 5
-D Minor,Triad,ADG,First Inversion,"[X,8,7,7,X,X]",b3 5 1
-D Minor,Triad,ADG,Second Inversion,"[X,12,12,10,X,X]",5 1 b3
-D Diminished,Triad,ADG,Root Position,"[X,5,3,1,X,X]",1 b3 b5
-D Diminished,Triad,ADG,First Inversion,"[X,8,6,7,X,X]",b3 b5 1
-D Diminished,Triad,ADG,Second Inversion,"[X,11,12,10,X,X]",b5 1 b3
+A,Triad,ADG,Root Position,"[X,12,11,9,X,X]",1 3 5
+A,Triad,ADG,First Inversion,"[X,4,2,2,X,X]",3 5 1
+A,Triad,ADG,Second Inversion,"[X,7,7,6,X,X]",5 1 3
+Am,Triad,ADG,Root Position,"[X,12,10,9,X,X]",1 b3 5
+Am,Triad,ADG,First Inversion,"[X,3,2,2,X,X]",b3 5 1
+Am,Triad,ADG,Second Inversion,"[X,7,7,5,X,X]",5 1 b3
+Adim,Triad,ADG,Root Position,"[X,12,10,8,X,X]",1 b3 b5
+Adim,Triad,ADG,First Inversion,"[X,3,1,2,X,X]",b3 b5 1
+Adim,Triad,ADG,Second Inversion,"[X,6,7,5,X,X]",b5 1 b3
+B,Triad,ADG,Root Position,"[X,2,1,X,X,X]",1 3 5
+B,Triad,ADG,First Inversion,"[X,6,4,4,X,X]",3 5 1
+B,Triad,ADG,Second Inversion,"[X,9,9,8,X,X]",5 1 3
+Bm,Triad,ADG,Root Position,"[X,2,0,X,X,X]",1 b3 5
+Bm,Triad,ADG,First Inversion,"[X,5,4,4,X,X]",b3 5 1
+Bm,Triad,ADG,Second Inversion,"[X,9,9,7,X,X]",5 1 b3
+Bdim,Triad,ADG,Root Position,"[X,2,0,X,X,X]",1 b3 b5
+Bdim,Triad,ADG,First Inversion,"[X,5,3,4,X,X]",b3 b5 1
+Bdim,Triad,ADG,Second Inversion,"[X,8,9,7,X,X]",b5 1 b3
+C,Triad,ADG,Root Position,"[X,3,2,0,X,X]",1 3 5
+C,Triad,ADG,First Inversion,"[X,7,5,5,X,X]",3 5 1
+C,Triad,ADG,Second Inversion,"[X,10,10,9,X,X]",5 1 3
+C,Triad,ADG,Root Position,"[X,3,1,0,X,X]",1 b3 5
+C,Triad,ADG,First Inversion,"[X,6,5,5,X,X]",b3 5 1
+C,Triad,ADG,Second Inversion,"[X,10,10,8,X,X]",5 1 b3
+Cdim,Triad,ADG,Root Position,"[X,3,1,X,X,X]",1 b3 b5
+Cdim,Triad,ADG,First Inversion,"[X,6,4,5,X,X]",b3 b5 1
+Cdim,Triad,ADG,Second Inversion,"[X,9,10,8,X,X]",b5 1 b3
+D,Triad,ADG,Root Position,"[X,5,4,2,X,X]",1 3 5
+D,Triad,ADG,First Inversion,"[X,9,7,7,X,X]",3 5 1
+D,Triad,ADG,Second Inversion,"[X,12,12,11,X,X]",5 1 3
+D,Triad,ADG,Root Position,"[X,5,3,2,X,X]",1 b3 5
+D,Triad,ADG,First Inversion,"[X,8,7,7,X,X]",b3 5 1
+D,Triad,ADG,Second Inversion,"[X,12,12,10,X,X]",5 1 b3
+Ddim,Triad,ADG,Root Position,"[X,5,3,1,X,X]",1 b3 b5
+Ddim,Triad,ADG,First Inversion,"[X,8,6,7,X,X]",b3 b5 1
+Ddim,Triad,ADG,Second Inversion,"[X,11,12,10,X,X]",b5 1 b3
+E,Triad,ADG,Root Position,"[X,7,6,4,X,X]",1 3 5
+E,Triad,ADG,First Inversion,"[X,11,9,9,X,X]",3 5 1
+E,Triad,ADG,Second Inversion,"[X,2,2,1,X,X]",5 1 3
+E,Triad,ADG,Root Position,"[X,7,5,4,X,X]",1 b3 5
+E,Triad,ADG,First Inversion,"[X,10,9,9,X,X]",b3 5 1
+E,Triad,ADG,Second Inversion,"[X,2,2,0,X,X]",5 1 b3
+Edim,Triad,ADG,Root Position,"[X,7,5,3,X,X]",1 b3 b5
+Edim,Triad,ADG,First Inversion,"[X,10,8,9,X,X]",b3 b5 1
+Edim,Triad,ADG,Second Inversion,"[X,1,2,0,X,X]",b5 1 b3
+F,Triad,ADG,Root Position,"[X,8,7,5,X,X]",1 3 5
+F,Triad,ADG,First Inversion,"[X,12,10,10,X,X]",3 5 1
+F,Triad,ADG,Second Inversion,"[X,3,3,2,X,X]",5 1 3
+F,Triad,ADG,Root Position,"[X,8,6,5,X,X]",1 b3 5
+F,Triad,ADG,First Inversion,"[X,11,10,10,X,X]",b3 5 1
+F,Triad,ADG,Second Inversion,"[X,3,3,1,X,X]",5 1 b3
+Fdim,Triad,ADG,Root Position,"[X,8,6,4,X,X]",1 b3 b5
+Fdim,Triad,ADG,First Inversion,"[X,11,9,10,X,X]",b3 b5 1
+Fdim,Triad,ADG,Second Inversion,"[X,2,3,1,X,X]",b5 1 b3
+G,Triad,ADG,Root Position,"[X,10,9,7,X,X]",1 3 5
+G,Triad,ADG,First Inversion,"[X,2,0,0,X,X]",3 5 1
+G,Triad,ADG,Second Inversion,"[X,5,5,4,X,X]",5 1 3
+G,Triad,ADG,Root Position,"[X,10,8,7,X,X]",1 b3 5
+G,Triad,ADG,First Inversion,"[X,1,0,0,X,X]",b3 5 1
+G,Triad,ADG,Second Inversion,"[X,5,5,3,X,X]",5 1 b3
+Gdim,Triad,ADG,Root Position,"[X,10,8,6,X,X]",1 b3 b5
+Gdim,Triad,ADG,First Inversion,"[X,1,2,0,X,X]",b3 b5 1
+Gdim,Triad,ADG,Second Inversion,"[X,4,5,3,X,X]",b5 1 b3
+A,Triad,EAD,Root Position,"[5,4,2,X,X,X]",1 3 5
+A,Triad,EAD,First Inversion,"[9,7,7,X,X,X]",3 5 1
+A,Triad,EAD,Second Inversion,"[12,12,11,X,X,X]",5 1 3
+Am,Triad,EAD,Root Position,"[5,3,2,X,X,X]",1 b3 5
+Am,Triad,EAD,First Inversion,"[8,7,7,X,X,X]",b3 5 1
+Am,Triad,EAD,Second Inversion,"[12,12,10,X,X,X]",5 1 b3
+Adim,Triad,EAD,Root Position,"[5,3,1,X,X,X]",1 b3 b5
+Adim,Triad,EAD,First Inversion,"[8,6,7,X,X,X]",b3 b5 1
+Adim,Triad,EAD,Second Inversion,"[11,12,10,X,X,X]",b5 1 b3
+B,Triad,EAD,Root Position,"[7,6,4,X,X,X]",1 3 5
+B,Triad,EAD,First Inversion,"[11,9,9,X,X,X]",3 5 1
+B,Triad,EAD,Second Inversion,"[2,2,1,X,X,X]",5 1 3
+Bm,Triad,EAD,Root Position,"[7,5,4,X,X,X]",1 b3 5
+Bm,Triad,EAD,First Inversion,"[10,9,9,X,X,X]",b3 5 1
+Bm,Triad,EAD,Second Inversion,"[2,2,0,X,X,X]",5 1 b3
+Bdim,Triad,EAD,Root Position,"[7,5,3,X,X,X]",1 b3 b5
+Bdim,Triad,EAD,First Inversion,"[10,8,9,X,X,X]",b3 b5 1
+Bdim,Triad,EAD,Second Inversion,"[1,2,0,X,X,X]",b5 1 b3
+C,Triad,EAD,Root Position,"[8,7,5,X,X,X]",1 3 5
+C,Triad,EAD,First Inversion,"[12,10,10,X,X,X]",3 5 1
+C,Triad,EAD,Second Inversion,"[3,3,2,X,X,X]",5 1 3
+Cm,Triad,EAD,Root Position,"[8,6,5,X,X,X]",1 b3 5
+Cm,Triad,EAD,First Inversion,"[11,10,10,X,X,X]",b3 5 1
+Cm,Triad,EAD,Second Inversion,"[3,3,1,X,X,X]",5 1 b3
+Cdim,Triad,EAD,Root Position,"[8,6,4,X,X,X]",1 b3 b5
+Cdim,Triad,EAD,First Inversion,"[11,9,10,X,X,X]",b3 b5 1
+Cdim,Triad,EAD,Second Inversion,"[2,3,1,X,X,X]",b5 1 b3
+D,Triad,EAD,Root Position,"[10,9,7,X,X,X]",1 3 5
+D,Triad,EAD,First Inversion,"[2,0,0,X,X,X]",3 5 1
+D,Triad,EAD,Second Inversion,"[5,5,4,X,X,X]",5 1 3
+Dm,Triad,EAD,Root Position,"[10,8,7,X,X,X]",1 b3 5
+Dm,Triad,EAD,First Inversion,"[1,0,0,X,X,X]",b3 5 1
+Dm,Triad,EAD,Second Inversion,"[5,5,3,X,X,X]",5 1 b3
+Ddim,Triad,EAD,Root Position,"[10,8,6,X,X,X]",1 b3 b5
+Ddim,Triad,EAD,First Inversion,"[1,2,0,X,X,X]",b3 b5 1
+Ddim,Triad,EAD,Second Inversion,"[4,5,3,X,X,X]",b5 1 b3
+E,Triad,EAD,Root Position,"[0,2,2,X,X,X]",1 3 5
+E,Triad,EAD,First Inversion,"[4,2,2,X,X,X]",3 5 1
+E,Triad,EAD,Second Inversion,"[7,7,6,X,X,X]",5 1 3
+Em,Triad,EAD,Root Position,"[0,2,1,X,X,X]",1 b3 5
+Em,Triad,EAD,First Inversion,"[3,2,2,X,X,X]",b3 5 1
+Em,Triad,EAD,Second Inversion,"[7,7,5,X,X,X]",5 1 b3
+Edim,Triad,EAD,Root Position,"[0,1,1,X,X,X]",1 b3 b5
+Edim,Triad,EAD,First Inversion,"[3,1,2,X,X,X]",b3 b5 1
+Edim,Triad,EAD,Second Inversion,"[6,7,5,X,X,X]",b5 1 b3
+F,Triad,EAD,Root Position,"[1,3,3,X,X,X]",1 3 5
+F,Triad,EAD,First Inversion,"[5,3,3,X,X,X]",3 5 1
+F,Triad,EAD,Second Inversion,"[8,8,7,X,X,X]",5 1 3
+Fm,Triad,EAD,Root Position,"[1,3,2,X,X,X]",1 b3 5
+Fm,Triad,EAD,First Inversion,"[4,3,3,X,X,X]",b3 5 1
+Fm,Triad,EAD,Second Inversion,"[8,8,6,X,X,X]",5 1 b3
+Fdim,Triad,EAD,Root Position,"[1,2,2,X,X,X]",1 b3 b5
+Fdim,Triad,EAD,First Inversion,"[4,2,3,X,X,X]",b3 b5 1
+Fdim,Triad,EAD,Second Inversion,"[7,8,6,X,X,X]",b5 1 b3
+G,Triad,EAD,Root Position,"[3,5,5,X,X,X]",1 3 5
+G,Triad,EAD,First Inversion,"[7,5,5,X,X,X]",3 5 1
+G,Triad,EAD,Second Inversion,"[10,10,9,X,X,X]",5 1 3
+Gm,Triad,EAD,Root Position,"[3,5,3,X,X,X]",1 b3 5
+Gm,Triad,EAD,First Inversion,"[6,5,5,X,X,X]",b3 5 1
+Gm,Triad,EAD,Second Inversion,"[10,10,8,X,X,X]",5 1 b3
+Gdim,Triad,EAD,Root Position,"[3,4,4,X,X,X]",1 b3 b5
+Gdim,Triad,EAD,First Inversion,"[6,4,5,X,X,X]",b3 b5 1
+Gdim,Triad,EAD,Second Inversion,"[9,10,8,X,X,X]",b5 1 b3
+A,Triad,DGB,Root Position,"[X,X,7,6,5,X]",1 3 5
+A,Triad,DGB,First Inversion,"[X,X,11,9,10,X]",3 5 1
+A,Triad,DGB,Second Inversion,"[X,X,2,2,2,X]",5 1 3
+Am,Triad,DGB,Root Position,"[X,X,7,5,5,X]",1 b3 5
+Am,Triad,DGB,First Inversion,"[X,X,10,9,10,X]",b3 5 1
+Am,Triad,DGB,Second Inversion,"[X,X,2,2,1,X]",5 1 b3
+Adim,Triad,DGB,Root Position,"[X,X,7,5,4,X]",1 b3 b5
+Adim,Triad,DGB,First Inversion,"[X,X,10,8,10,X]",b3 b5 1
+Adim,Triad,DGB,Second Inversion,"[X,X,1,2,1,X]",b5 1 b3
+B,Triad,DGB,Root Position,"[X,X,9,8,7,X]",1 3 5
+B,Triad,DGB,First Inversion,"[X,X,1,11,12,X]",3 5 1
+B,Triad,DGB,Second Inversion,"[X,X,4,4,4,X]",5 1 3
+Bm,Triad,DGB,Root Position,"[X,X,9,7,7,X]",1 b3 5
+Bm,Triad,DGB,First Inversion,"[X,X,12,11,12,X]",b3 5 1
+Bm,Triad,DGB,Second Inversion,"[X,X,4,4,3,X]",5 1 b3
+Bdim,Triad,DGB,Root Position,"[X,X,9,7,6,X]",1 b3 b5
+Bdim,Triad,DGB,First Inversion,"[X,X,12,10,12,X]",b3 b5 1
+Bdim,Triad,DGB,Second Inversion,"[X,X,3,4,3,X]",b5 1 b3
+C,Triad,DGB,Root Position,"[X,X,10,9,8,X]",1 3 5
+C,Triad,DGB,First Inversion,"[X,X,2,0,1,X]",3 5 1
+C,Triad,DGB,Second Inversion,"[X,X,5,5,5,X]",5 1 3
+Cm,Triad,DGB,Root Position,"[X,X,10,8,8,X]",1 b3 5
+Cm,Triad,DGB,First Inversion,"[X,X,1,0,1,X]",b3 5 1
+Cm,Triad,DGB,Second Inversion,"[X,X,5,5,4,X]",5 1 b3
+Cdim,Triad,DGB,Root Position,"[X,X,10,8,7,X]",1 b3 b5
+Cdim,Triad,DGB,First Inversion,"[X,X,1,11,1,X]",b3 b5 1
+Cdim,Triad,DGB,Second Inversion,"[X,X,4,5,4,X]",b5 1 b3
+D,Triad,DGB,Root Position,"[X,X,12,11,10,X]",1 3 5
+D,Triad,DGB,First Inversion,"[X,X,4,2,3,X]",3 5 1
+D,Triad,DGB,Second Inversion,"[X,X,7,7,7,X]",5 1 3
+Dm,Triad,DGB,Root Position,"[X,X,12,10,10,X]",1 b3 5
+Dm,Triad,DGB,First Inversion,"[X,X,3,2,3,X]",b3 5 1
+Dm,Triad,DGB,Second Inversion,"[X,X,7,7,6,X]",5 1 b3
+Ddim,Triad,DGB,Root Position,"[X,X,12,10,9,X]",1 b3 b5
+Ddim,Triad,DGB,First Inversion,"[X,X,3,1,3,X]",b3 b5 1
+Ddim,Triad,DGB,Second Inversion,"[X,X,6,7,6,X]",b5 1 b3
+E,Triad,DGB,Root Position,"[X,X,2,1,0,X]",1 3 5
+E,Triad,DGB,First Inversion,"[X,X,6,4,5,X]",3 5 1
+E,Triad,DGB,Second Inversion,"[X,X,9,9,9,X]",5 1 3
+Em,Triad,DGB,Root Position,"[X,X,2,0,0,X]",1 b3 5
+Em,Triad,DGB,First Inversion,"[X,X,5,4,5,X]",b3 5 1
+Em,Triad,DGB,Second Inversion,"[X,X,9,9,8,X]",5 1 b3
+Edim,Triad,DGB,Root Position,"[X,X,2,0,11,X]",1 b3 b5
+Edim,Triad,DGB,First Inversion,"[X,X,5,3,0,X]",b3 b5 1
+Edim,Triad,DGB,Second Inversion,"[X,X,8,9,8,X]",b5 1 b3
+F,Triad,DGB,Root Position,"[X,X,3,2,1,X]",1 3 5
+F,Triad,DGB,First Inversion,"[X,X,7,5,6,X]",3 5 1
+F,Triad,DGB,Second Inversion,"[X,X,10,10,10,X]",5 1 3
+Fm,Triad,DGB,Root Position,"[X,X,3,1,1,X]",1 b3 5
+Fm,Triad,DGB,First Inversion,"[X,X,6,5,6,X]",b3 5 1
+Fm,Triad,DGB,Second Inversion,"[X,X,10,10,9,X]",5 1 b3
+Fdim,Triad,DGB,Root Position,"[X,X,3,1,0,X]",1 b3 b5
+Fdim,Triad,DGB,First Inversion,"[X,X,6,4,6,X]",b3 b5 1
+Fdim,Triad,DGB,Second Inversion,"[X,X,9,10,9,X]",b5 1 b3
+G,Triad,DGB,Root Position,"[X,X,5,4,3,X]",1 3 5
+G,Triad,DGB,First Inversion,"[X,X,9,7,8,X]",3 5 1
+G,Triad,DGB,Second Inversion,"[X,X,0,0,0,X]",5 1 3
+Gm,Triad,DGB,Root Position,"[X,X,5,3,3,X]",1 b3 5
+Gm,Triad,DGB,First Inversion,"[X,X,8,7,8,X]",b3 5 1
+Gm,Triad,DGB,Second Inversion,"[X,X,0,0,11,X]",5 1 b3
+Gdim,Triad,DGB,Root Position,"[X,X,5,3,2,X]",1 b3 b5
+Gdim,Triad,DGB,First Inversion,"[X,X,8,6,0,X]",b3 b5 1
+Gdim,Triad,DGB,Second Inversion,"[X,X,1,0,11,X]",b5 1 b3
+A,Triad,GBe,Root Position,"[X,X,X,2,2,0]",1 3 5
+A,Triad,GBe,First Inversion,"[X,X,X,6,5,5]",3 5 1
+A,Triad,GBe,Second Inversion,"[X,X,X,9,10,9]",5 1 3
+Am,Triad,GBe,Root Position,"[X,X,X,2,1,0]",1 b3 5
+Am,Triad,GBe,First Inversion,"[X,X,X,5,5,5]",b3 5 1
+Am,Triad,GBe,Second Inversion,"[X,X,X,9,10,8]",5 1 b3
+Adim,Triad,GBe,Root Position,"[X,X,X,2,1,11]",1 b3 b5
+Adim,Triad,GBe,First Inversion,"[X,X,X,5,4,5]",b3 b5 1
+Adim,Triad,GBe,Second Inversion,"[X,X,X,8,10,8]",b5 1 b3
+B,Triad,GBe,Root Position,"[X,X,X,4,4,2]",1 3 5
+B,Triad,GBe,First Inversion,"[X,X,X,8,7,7]",3 5 1
+B,Triad,GBe,Second Inversion,"[X,X,X,11,12,11]",5 1 3
+Bm,Triad,GBe,Root Position,"[X,X,X,4,3,2]",1 b3 5
+Bm,Triad,GBe,First Inversion,"[X,X,X,7,7,7]",b3 5 1
+Bm,Triad,GBe,Second Inversion,"[X,X,X,11,12,10]",5 1 b3
+Bdim,Triad,GBe,Root Position,"[X,X,X,4,3,1]",1 b3 b5
+Bdim,Triad,GBe,First Inversion,"[X,X,X,7,6,7]",b3 b5 1
+Bdim,Triad,GBe,Second Inversion,"[X,X,X,10,12,10]",b5 1 b3
+C,Triad,GBe,Root Position,"[X,X,X,5,5,3]",1 3 5
+C,Triad,GBe,First Inversion,"[X,X,X,9,8,8]",3 5 1
+C,Triad,GBe,Second Inversion,"[X,X,X,0,1,0]",5 1 3
+Cm,Triad,GBe,Root Position,"[X,X,X,5,4,3]",1 b3 5
+Cm,Triad,GBe,First Inversion,"[X,X,X,8,8,8]",b3 5 1
+Cm,Triad,GBe,Second Inversion,"[X,X,X,0,1,11]",5 1 b3
+Cdim,Triad,GBe,Root Position,"[X,X,X,5,4,2]",1 b3 b5
+Cdim,Triad,GBe,First Inversion,"[X,X,X,8,7,8]",b3 b5 1
+Cdim,Triad,GBe,Second Inversion,"[X,X,X,X,X,X]",b5 1 b3
+D,Triad,GBe,Root Position,"[X,X,X,7,7,5]",1 3 5
+D,Triad,GBe,First Inversion,"[X,X,X,11,10,10]",3 5 1
+D,Triad,GBe,Second Inversion,"[X,X,X,2,3,2]",5 1 3
+Dm,Triad,GBe,Root Position,"[X,X,X,7,6,5]",1 b3 5
+Dm,Triad,GBe,First Inversion,"[X,X,X,10,10,10]",b3 5 1
+Dm,Triad,GBe,Second Inversion,"[X,X,X,2,3,1]",5 1 b3
+Ddim,Triad,GBe,Root Position,"[X,X,X,7,6,4]",1 b3 b5
+Ddim,Triad,GBe,First Inversion,"[X,X,X,10,9,10]",b3 b5 1
+Ddim,Triad,GBe,Second Inversion,"[X,X,X,1,3,1]",b5 1 b3
+E,Triad,GBe,Root Position,"[X,X,X,9,9,7]",1 3 5
+E,Triad,GBe,First Inversion,"[X,X,X,1,0,0]",3 5 1
+E,Triad,GBe,Second Inversion,"[X,X,X,4,5,4]",5 1 3
+Em,Triad,GBe,Root Position,"[X,X,X,9,8,7]",1 b3 5
+Em,Triad,GBe,First Inversion,"[X,X,X,0,0,0]",b3 5 1
+Em,Triad,GBe,Second Inversion,"[X,X,X,4,5,3]",5 1 b3
+Edim,Triad,GBe,Root Position,"[X,X,X,9,8,6]",1 b3 b5
+Edim,Triad,GBe,First Inversion,"[X,X,X,0,11,12]",b3 b5 1
+Edim,Triad,GBe,Second Inversion,"[X,X,X,3,5,3]",b5 1 b3
+F,Triad,GBe,Root Position,"[X,X,X,10,10,8]",1 3 5
+F,Triad,GBe,First Inversion,"[X,X,X,2,1,1]",3 5 1
+F,Triad,GBe,Second Inversion,"[X,X,X,5,6,5]",5 1 3
+Fm,Triad,GBe,Root Position,"[X,X,X,10,9,8]",1 b3 5
+Fm,Triad,GBe,First Inversion,"[X,X,X,1,1,1]",b3 5 1
+Fm,Triad,GBe,Second Inversion,"[X,X,X,5,6,4]",5 1 b3
+Fdim,Triad,GBe,Root Position,"[X,X,X,10,9,7]",1 b3 b5
+Fdim,Triad,GBe,First Inversion,"[X,X,X,1,0,1]",b3 b5 1
+Fdim,Triad,GBe,Second Inversion,"[X,X,X,4,6,4]",b5 1 b3
+G,Triad,GBe,Root Position,"[X,X,X,0,0,2]",1 3 5
+G,Triad,GBe,First Inversion,"[X,X,X,4,3,3]",3 5 1
+G,Triad,GBe,Second Inversion,"[X,X,X,7,8,7]",5 1 3
+Gm,Triad,GBe,Root Position,"[X,X,X,0,11,10]",1 b3 5
+Gm,Triad,GBe,First Inversion,"[X,X,X,3,3,3]",b3 5 1
+Gm,Triad,GBe,Second Inversion,"[X,X,X,7,8,6]",5 1 b3
+Gdim,Triad,GBe,Root Position,"[X,X,X,0,11,9]",1 b3 b5
+Gdim,Triad,GBe,First Inversion,"[X,X,X,3,2,3]",b3 b5 1
+Gdim,Triad,GBe,Second Inversion,"[X,X,X,6,8,6]",b5 1 b3
